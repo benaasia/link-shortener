@@ -22,7 +22,7 @@ function pus_shortcode_shorten_url($atts, $content){
     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(['url' => $content]));
     curl_setopt($ch, CURLOPT_TIMEOUT, 10);
     curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        "Authorization: Bearer 60c34239f855a373e9379d825ef35e1b",
+        "Authorization: Bearer your-api-key",
         "Content-Type: application/json"
     ]);
 
@@ -36,4 +36,5 @@ function pus_shortcode_shorten_url($atts, $content){
     }
 
     return $content;
+
 }
